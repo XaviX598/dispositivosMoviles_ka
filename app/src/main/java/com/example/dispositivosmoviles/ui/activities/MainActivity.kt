@@ -29,41 +29,41 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        initClass()
+        //initClass()
     }
 
     override fun onDestroy() {
         super.onDestroy()
     }
 
-    private fun initClass() {
-        binding.btnLogin.setOnClickListener {
-
-            val check = LoginValidator().checkLogin(
-                binding.txtName.text.toString(),
-                binding.txtPass.text.toString()
-            )
-
-            if (check) {
-                var intent = Intent(
-                    this,
-                    SecondActivity::class.java
-                )
-
-                intent.putExtra(
-                    "var1",
-                    //binding.txtBuscar.text.toString()
-                    ""
-                )
-
-                intent.putExtra("var2", 2)
-                startActivity(intent)
-            } else {
-                Snackbar.make(
-                    binding.bienvenida, "Usuario o contraseña inválidos",
-                    Snackbar.LENGTH_LONG
-                ).show()
-            }
-        }
-    }
+//    private fun initClass() {
+//        binding.btnLogin.setOnClickListener {
+//
+//            val check = LoginValidator().checkLogin(
+//                binding.txtName.text.toString(),
+//                binding.txtPass.text.toString()
+//            )
+//
+//            if (check) {
+//                var intent = Intent(
+//                    this,
+//                    SecondActivity::class.java
+//                )
+//
+//                intent.putExtra(
+//                    "var1",
+//                    //binding.txtBuscar.text.toString()
+//                    ""
+//                )
+//
+//                intent.putExtra("var2", 2)
+//                startActivity(intent)
+//            } else {
+//                Snackbar.make(
+//                    binding.bienvenida, "Usuario o contraseña inválidos",
+//                    Snackbar.LENGTH_LONG
+//                ).show()
+//            }
+//        }
+//    }
 }
